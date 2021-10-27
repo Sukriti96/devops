@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: idbi-apim-es-pv-0
+  labels:
+    type: hostPath
+  namespace: nsp-idbi-apim-prod
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: "1Gi"
+  hostPath:
+    path: "/opt/pv/idbi/apim-es-0"
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: idbi-apim-es-pv-1
+  labels:
+    type: hostPath
+  namespace: nsp-idbi-apim-prod
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: "1Gi"
+  hostPath:
+    path: "/opt/pv/idbi/apim-es-1"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: idbi-apim-es-pv-2
+  labels:
+    type: hostPath
+  namespace: nsp-idbi-apim-prod
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: "1Gi"
+  hostPath:
+    path: "/opt/pv/idbi/apim-es-2"
